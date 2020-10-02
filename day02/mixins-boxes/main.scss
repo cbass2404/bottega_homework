@@ -1,0 +1,40 @@
+@mixin box-one-four($height: 100px, $width: 100px) {
+  height: $height;
+  width: $width;
+}
+
+@mixin flex-config($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+body {
+  @include flex-config;
+  @include box-one-four($height: 100vh, $width: 100vw);
+}
+
+.boxes-wrapper {
+  @include flex-config($justify-content: space-evenly);
+  @include box-one-four($width: 100%);
+
+  .box-one {
+    @include box-one-four;
+    background-color: red;
+  }
+  ​
+  .box-two {
+    @include box-one-four;
+    background-color: green;
+  }
+  ​
+  .box-three {
+    @include box-one-four;
+    background-color: blue;
+  }
+  ​
+  .box-four {
+    @include box-one-four;
+    background-color: purple;
+  }
+}

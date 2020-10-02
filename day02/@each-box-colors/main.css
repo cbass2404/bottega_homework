@@ -1,0 +1,50 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.boxes-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.boxes-wrapper .box-red {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.boxes-wrapper .box-green {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+
+.boxes-wrapper .box-blue {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
+.boxes-wrapper .box-purple {
+  background-color: purple;
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=main.css.map */
