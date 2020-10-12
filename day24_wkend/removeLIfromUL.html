@@ -51,6 +51,7 @@
         let innerTxt = document.createTextNode(`${item.innerHTML}`);
         listItem.appendChild(innerTxt);
         completedToDo.appendChild(listItem);
+        completedToDo.style.textDecoration = 'line-through';
         item.remove();
       });
     });
