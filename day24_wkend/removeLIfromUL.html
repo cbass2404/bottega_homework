@@ -2,58 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>ToDo App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
 
     <style>
+      body {
+        font-size: 20px;
+        font-family: "Font Awesome\ 5 Free", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      div {
+        margin: 0;
+        padding: 0;
+      }
+
+      ::before {
+        margin: 0;
+        padding: 0;
+      }
+
+      ::after {
+        margin: 0;
+        padding: 0;
+      }
+
+      .content-wrapper {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .navigation {
+        width: 60vw;
+        display: grid;
+        justify-content: space-around;
+        align-content: center;
+        grid-template-columns: 1fr 3fr 3fr;
+      }
+
       .todoItem:hover {
         cursor: pointer;
       }
     </style>
   </head>
-
   <body>
-    <div class="todos">
-      <h2>Pending Todos</h2>
-      <ul>
-        <li class="todoItem">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa,
-          animi.
-        </li>
-        <li class="todoItem">
-          Numquam dolor quo alias nam vel voluptates magni magnam quisquam.
-        </li>
-        <li class="todoItem">
-          Recusandae eaque quisquam facere ab reprehenderit cupiditate magni
-          placeat quis?
-        </li>
-        <li class="todoItem">
-          Expedita asperiores nam saepe voluptatem, nostrum aliquid debitis quam
-          recusandae.
-        </li>
-        <li class="todoItem">
-          Quaerat velit deserunt reprehenderit, vel placeat impedit accusamus
-          non, deleniti!
-        </li>
-      </ul>
-    </div>
-    <div class="completed">
-      <h2>Completed Todos</h2>
-      <ul class="completedTodoWrapper"></ul>
+    <div class="content-wrapper">
+      <div class="navigation">
+        <i class="fas fa-plus"></i>
+        <h2 class='todo-nav todo'>ToDo List</h2>
+        <h2 class='todo-nav done'>Completed List</h2>
+      </div>
+      <div class="list-box">
+        <div id="todo">
+          <!-- todo tasks go here -->
+        </div>
+        <div id="done">
+          <!-- completed tasks go here -->
+        </div>
+      </div>
     </div>
   </body>
   <script>
-    const toDo = document.querySelectorAll(".todoItem");
-    const completedToDo = document.querySelector(".completedTodoWrapper");
-
-    toDo.forEach((item) => {
-      item.addEventListener("click", () => {
-        let listItem = document.createElement("LI");
-        let innerTxt = document.createTextNode(`${item.innerHTML}`);
-        listItem.appendChild(innerTxt);
-        completedToDo.appendChild(listItem);
-        completedToDo.style.textDecoration = 'line-through';
-        item.remove();
-      });
-    });
+    
   </script>
 </html>
+
+<!-- &#xf14a; -->
