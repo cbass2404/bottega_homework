@@ -48,5 +48,4 @@ const sortLastName = (listName) => {
     pushToDom(".sorted-name-target", "Li", item);
   });
 };
-
-console.log(sortLastName(people));
+sortLastName(people);

@@ -15,19 +15,17 @@ const data = [
   "truck",
 ];
 
-const dataMapper = () => {
-  const totalInstance = [
-    { car: 0 },
-    { truck: 0 },
-    { bike: 0 },
-    { walk: 0 },
-    { van: 0 },
-  ];
+const occurrenceCounter = (arr) =>
+  arr.reduce((prev, curr) => ((prev[curr] = ++prev[curr] || 1), prev), {});
 
-  // data.map(item);
+const dataPrinter = occurrenceCounter(data);
 
-  return totalInstance.map((item, { k, v }) => {
-    pushToDom(".sum-instance-target", "Li", `${item[k]}`);
-  });
-};
-dataMapper();
+pushToDom(
+  ".sum-instance-target",
+  "Li",
+  `Car: ${dataPrinter["car"]}
+  Truck: ${dataPrinter["truck"]}
+  Bike: ${dataPrinter["bike"]}
+  Walk: ${dataPrinter["walk"]}
+  Van: ${dataPrinter["van"]}`
+);
