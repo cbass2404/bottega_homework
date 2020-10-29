@@ -41,3 +41,12 @@ const people = [
   "Blair, Tony",
   "Blake, William",
 ];
+
+const sortLastName = (listName) => {
+  sortedList = listName.sort();
+  return sortedList.map((item) => {
+    pushToDom(".sorted-name-target", "Li", item);
+  });
+};
+
+console.log(sortLastName(people));
