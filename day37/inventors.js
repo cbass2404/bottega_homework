@@ -45,17 +45,14 @@ const inventorSorted = () => {
 };
 inventorSorted();
 
-const inventorsAge = () => {
-  return inventors.map((inventor) => {
-    const inventorAge = inventor["passed"] - inventor["year"];
-    pushToDom(
-      ".age-target",
-      "Li",
-      `${inventor["first"]} ${inventor["last"]} Age: ${inventorAge}`
-    );
-  });
+const inventorsTotalYears = () => {
+  const totalYears = inventors.reduce((total, inventor) => {
+    return total + (inventor.passed - inventor.year);
+  }, 0);
+
+  pushToDom(".age-target", "Li", `${totalYears} lived between them all`);
 };
-inventorsAge();
+inventorsTotalYears();
 
 const inventorsSortedAge = () => {
   const newInventorList = [];
